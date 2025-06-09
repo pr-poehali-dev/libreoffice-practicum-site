@@ -13,43 +13,110 @@ const LabSection = () => {
     {
       id: 1,
       title: "Лабораторная работа №1",
-      subtitle: "Основы Writer",
+      subtitle: "LibreOffice Writer - Текстовый процессор",
       description:
-        "Создание и форматирование текстового документа, работа со стилями",
+        "Освойте создание документов, работу со стилями, автозаменой, вставку таблиц и изображений. Экспорт в PDF и HTML.",
       difficulty: "Начальный",
-      duration: "60 мин",
+      duration: "90 мин",
       icon: "FileEdit",
-      status: "coming-soon",
+      status: "available",
+      objectives: [
+        "Создание и форматирование текстового документа",
+        "Работа с мастерами и шаблонами",
+        "Использование стилей и автозамены",
+        "Вставка таблиц, изображений и диаграмм",
+        "Экспорт в различные форматы (PDF, HTML, MediaWiki)",
+      ],
     },
     {
       id: 2,
       title: "Лабораторная работа №2",
-      subtitle: "Работа с таблицами Calc",
-      description: "Создание электронных таблиц, формулы и диаграммы",
+      subtitle: "LibreOffice Calc - Электронные таблицы",
+      description:
+        "Создание электронных таблиц, работа с формулами, функциями, построение диаграмм и анализ данных.",
       difficulty: "Средний",
-      duration: "90 мин",
+      duration: "120 мин",
       icon: "Table",
-      status: "coming-soon",
+      status: "available",
+      objectives: [
+        "Создание и форматирование электронных таблиц",
+        "Работа с формулами и функциями",
+        "Построение диаграмм и графиков",
+        "Сортировка и фильтрация данных",
+        "Создание сводных таблиц",
+      ],
     },
     {
       id: 3,
       title: "Лабораторная работа №3",
-      subtitle: "Презентации Impress",
-      description: "Создание интерактивных презентаций с анимацией",
+      subtitle: "LibreOffice Impress - Презентации",
+      description:
+        "Создание интерактивных презентаций с анимацией, переходами, мультимедиа контентом и мастер-слайдами.",
       difficulty: "Средний",
-      duration: "75 мин",
+      duration: "105 мин",
       icon: "Monitor",
-      status: "coming-soon",
+      status: "available",
+      objectives: [
+        "Создание презентации с использованием шаблонов",
+        "Работа с мастер-слайдами и макетами",
+        "Добавление анимации и переходов",
+        "Вставка мультимедиа контента",
+        "Настройка показа презентации",
+      ],
     },
     {
       id: 4,
       title: "Лабораторная работа №4",
-      subtitle: "Интеграция приложений",
-      description: "Совместное использование Writer, Calc и Impress",
+      subtitle: "LibreOffice Draw - Векторная графика",
+      description:
+        "Создание векторных изображений, работа с 3D объектами, диаграммами и техническими чертежами.",
       difficulty: "Продвинутый",
-      duration: "120 мин",
+      duration: "90 мин",
+      icon: "Pen",
+      status: "available",
+      objectives: [
+        "Создание векторных изображений и схем",
+        "Работа с 3D объектами и эффектами",
+        "Создание технических чертежей",
+        "Работа со слоями и группировкой",
+        "Экспорт в различные графические форматы",
+      ],
+    },
+    {
+      id: 5,
+      title: "Лабораторная работа №5",
+      subtitle: "LibreOffice Base - База данных",
+      description:
+        "Создание реляционных баз данных, работа с таблицами, запросами, формами и отчетами.",
+      difficulty: "Продвинутый",
+      duration: "135 мин",
+      icon: "Database",
+      status: "available",
+      objectives: [
+        "Создание структуры базы данных",
+        "Работа с таблицами и связями",
+        "Создание запросов и форм",
+        "Генерация отчетов",
+        "Импорт и экспорт данных",
+      ],
+    },
+    {
+      id: 6,
+      title: "Лабораторная работа №6",
+      subtitle: "Интеграция LibreOffice - Комплексный проект",
+      description:
+        "Совместное использование всех компонентов LibreOffice для создания комплексного документооборота.",
+      difficulty: "Экспертный",
+      duration: "150 мин",
       icon: "Link",
-      status: "coming-soon",
+      status: "available",
+      objectives: [
+        "Интеграция Writer, Calc, Impress и Draw",
+        "Создание комплексного отчета с данными из Calc",
+        "Подготовка презентации с графиками и схемами",
+        "Связывание объектов между приложениями",
+        "Автоматизация процессов с помощью макросов",
+      ],
     },
   ];
 
@@ -61,6 +128,8 @@ const LabSection = () => {
         return "bg-yellow-100 text-yellow-800";
       case "Продвинутый":
         return "bg-red-100 text-red-800";
+      case "Экспертный":
+        return "bg-purple-100 text-purple-800";
       default:
         return "bg-gray-100 text-gray-800";
     }
@@ -103,7 +172,7 @@ const LabSection = () => {
                     </div>
                   </div>
                   <Badge variant="secondary" className="text-xs">
-                    Скоро
+                    {lab.status === "available" ? "Доступно" : "Скоро"}
                   </Badge>
                 </div>
               </CardHeader>
@@ -131,21 +200,21 @@ const LabSection = () => {
 
         <div className="bg-gradient-to-r from-primary/5 to-light-purple/10 rounded-2xl p-8 text-center">
           <Icon
-            name="FlaskConical"
+            name="BookOpen"
             className="mx-auto text-primary mb-4"
             size={56}
           />
           <h3 className="font-montserrat font-semibold text-2xl mb-4">
-            Лабораторные работы готовятся
+            Практические задания LibreOffice
           </h3>
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto text-lg">
-            Пришлите материалы для лабораторных работ, и я создам интерактивные
-            практические задания с пошаговыми инструкциями и проверкой
-            результатов
+            Изучите все компоненты пакета LibreOffice через практические
+            задания. От базовой работы с текстом до создания комплексных
+            проектов с интеграцией всех приложений.
           </p>
           <div className="flex items-center justify-center gap-2 text-primary font-medium">
-            <Icon name="Rocket" size={20} />
-            <span>Готов добавить ваши лабораторные работы!</span>
+            <Icon name="Sparkles" size={20} />
+            <span>6 детальных лабораторных работ готовы к изучению!</span>
           </div>
         </div>
       </div>
