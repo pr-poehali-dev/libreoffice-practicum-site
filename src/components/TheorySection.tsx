@@ -13,44 +13,61 @@ const TheorySection = () => {
       id: 1,
       title: "Введение в LibreOffice",
       description:
-        "Основы работы с офисным пакетом, интерфейс и базовые функции",
+        "LibreOffice — это бесплатный, открытый офисный пакет для работы с документами, таблицами, презентациями и другими задачами. Разработан как альтернатива Microsoft Office, но без лицензионных платежей. Включает шесть основных приложений, интегрированных в единую среду.",
       icon: "Info",
       color: "bg-blue-100 text-blue-600",
+      details:
+        "Офисный пакет отличается от OpenOffice интерфейсом, хотя функционал практически идентичен. LibreOffice работает быстрее, чем Apache OpenOffice и чуть лучше совместим с Microsoft Office. Разрабатывается с 2010 года.",
     },
     {
       id: 2,
       title: "LibreOffice Writer",
-      description: "Работа с текстовыми документами, форматирование и стили",
+      description:
+        "Текстовый редактор, который поддерживает все необходимые функции для работы с документами",
       icon: "FileText",
       color: "bg-green-100 text-green-600",
+      details:
+        "Основные возможности: настройка стиля текста, использование изображений в документе, колонки, таблицы, разделы, автопроверка орфографии.",
     },
     {
       id: 3,
       title: "LibreOffice Calc",
-      description: "Электронные таблицы, формулы и функции",
+      description:
+        "Многофункциональный инструмент для построения таблиц с интегрированными вычислительными функциями и возможностями визуализации данных",
       icon: "Calculator",
       color: "bg-purple-100 text-purple-600",
+      details:
+        "Программа обладает обширным набором функций, охватывающих как математические операции, так и проведение финансовых расчётов. Включает возможности создания диаграмм.",
     },
     {
       id: 4,
       title: "LibreOffice Impress",
-      description: "Создание презентаций и мультимедийных материалов",
+      description:
+        "Программа для создания презентаций, схожая с Microsoft PowerPoint",
       icon: "Presentation",
       color: "bg-orange-100 text-orange-600",
+      details:
+        "Пользователь может выбрать из предложенных стилей оформления презентации или разработать собственный уникальный стиль. Позволяет создавать отдельные слайды с различным содержанием.",
     },
     {
       id: 5,
-      title: "Совместная работа",
-      description: "Обмен документами и коллективная работа над проектами",
-      icon: "Users",
+      title: "LibreOffice Draw",
+      description:
+        "Векторный графический редактор для создания несложных плакатов с использованием стандартного набора инструментов",
+      icon: "Palette",
       color: "bg-pink-100 text-pink-600",
+      details:
+        "Каждый объект в Draw может быть преобразован в трехмерное изображение. Предназначен для создания графических материалов и диаграмм.",
     },
     {
       id: 6,
-      title: "Автоматизация",
-      description: "Макросы и автоматизация рутинных задач",
-      icon: "Zap",
+      title: "LibreOffice Base & Math",
+      description:
+        "Система управления базами данных Base и приложение для работы с математическими формулами Math",
+      icon: "Database",
       color: "bg-yellow-100 text-yellow-600",
+      details:
+        "Base обеспечивает работу с базами данных, а Math позволяет создавать и редактировать математические формулы для документов.",
     },
   ];
 
@@ -88,9 +105,14 @@ const TheorySection = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-500">
-                    Готовится к добавлению
+                <div className="mb-4">
+                  <p className="text-sm text-gray-700 leading-relaxed">
+                    {topic.details}
+                  </p>
+                </div>
+                <div className="flex items-center justify-between pt-2">
+                  <span className="text-sm font-medium text-primary">
+                    Изучить подробнее
                   </span>
                   <Icon name="ArrowRight" className="text-primary" size={20} />
                 </div>
@@ -107,15 +129,15 @@ const TheorySection = () => {
               size={48}
             />
             <h3 className="font-montserrat font-semibold text-xl mb-2">
-              Материалы в разработке
+              Полная теория LibreOffice
             </h3>
             <p className="text-gray-600 mb-4">
-              Пришлите ваши теоретические материалы, и я добавлю их в
-              соответствующие разделы
+              LibreOffice способен выполнять функции коммерческих офисных
+              пакетов как для личного, так и для профессионального использования
             </p>
             <span className="inline-flex items-center gap-2 text-primary font-medium">
-              <Icon name="MessageCircle" size={16} />
-              Готов к загрузке контента
+              <Icon name="BookOpen" size={16} />
+              Готово к изучению
             </span>
           </div>
         </div>
