@@ -178,7 +178,10 @@ const LabSection = () => {
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-600 mb-4">
-                  {lab.description}
+                  Изучите основы LibreOffice Writer: настройка рабочего окна,
+                  параметры страницы, создание документов с автотекстом и
+                  автозаменой, проверка орфографии, сохранение в различных
+                  форматах.
                 </CardDescription>
 
                 <div className="flex items-center justify-between">
